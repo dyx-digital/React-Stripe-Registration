@@ -1,0 +1,10 @@
+.wechat {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
+.please_validate {
+    padding-top: 10px;
+    color: red;
+}
