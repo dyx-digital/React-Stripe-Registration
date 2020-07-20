@@ -19,12 +19,15 @@ Go to AWS Cloudfront, deploy a new version. Make sure **HTTP to HTTPS redirects*
 ## Checklist
 Checkout.js
 - [ ] Add homepage URL
-- [ ] Add Lambda for AWS SES 
+- [ ] Add Lambda for AWS SES
+
 CreditCardPayment.js
 - [ ] Add Lambda for Stripe PaymentIntent 
+
 Review.js
 - [ ] Add Stripe Public Key
 - [ ] Add Success Page URL
+
 UploadButton.js
 - [ ] Add S3 Bucket URL
 - [ ] Add Lambda for File Upload
