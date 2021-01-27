@@ -3,7 +3,7 @@ import CurrencyFormat from 'react-currency-format';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 
-import { makeStyles, styled } from '@material-ui/core/styles';
+import { makeStyles, createMuiTheme, styled, MuiThemeProvider } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
@@ -26,6 +26,18 @@ import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
 import './css/Information.css';
 
 const TESTING = false;
+
+const theme = createMuiTheme({
+  overrides: {
+    MuiSelect: {
+      outlined: {
+        "&.MuiSelect-outlined.MuiSelect-outlined": {
+          backgroundColor: "transparent"
+        },
+      }
+    }
+  }
+});
 
 const ContainerGrid = styled(Grid)({});
 const useStyles = makeStyles((theme) => 
@@ -461,6 +473,8 @@ export default function AddressForm(props) {
                   </Grid>
                   <Grid item xs={12} sm={3}   className={classes.monthGrid}>
                   <FormControl variant="outlined" className={classes.formControl}>
+                  <MuiThemeProvider theme={theme}>
+
                   <InputLabel 
 
                     >Month</InputLabel>
@@ -469,6 +483,7 @@ export default function AddressForm(props) {
 
                       error={errors.month && touched.month}
                       // helperText={(errors.month && touched.month) && errors.month}
+                      autoWidth={true}
 
                       name="month"
                       label="Month"
@@ -493,6 +508,7 @@ export default function AddressForm(props) {
                       <MenuItem value="11">November</MenuItem>
                       <MenuItem value="12">December</MenuItem>
                     </Select>
+                    </MuiThemeProvider>
 
                   </FormControl>
                   </Grid>
