@@ -4,9 +4,7 @@ import {
   Formik, Form
 } from 'formik';
 import * as Yup from 'yup';
-
 import {CardNumberElement, CardExpiryElement, CardCvcElement, useElements, useStripe} from '@stripe/react-stripe-js';
-
 import { makeStyles, styled } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -16,10 +14,10 @@ import Button from '@material-ui/core/Button';
 import './css/CreditCardPayment.css';
 
 const TESTING = false;
-const STRIPE_INTENT_API_URL = ''
+const STRIPE_INTENT_API_URL = '' // https://asdfasdf.execute-api.us-east-1.amazonaws.com/dev/stripeIntent
 
+// Styles
 const ContainerGrid = styled(Grid)({});
-
 const CardGrid = styled(Grid)({
   border: '1px',
 
@@ -29,7 +27,6 @@ const CardGrid = styled(Grid)({
 
   borderRadius: '4px',
 });
-
 const CardExpiryGrid = styled(Grid)({
   border: '1px',
   margin: '0 15px 20px',

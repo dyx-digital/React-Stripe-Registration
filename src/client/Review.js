@@ -21,8 +21,8 @@ import AlipayLogo from '../images/alipay.jpg';
 import './css/Review.css'
 
 const TESTING = false;
-const STRIPE_PK = ''
-const SUCCESS_PAGE_URL = ''
+const STRIPE_PK = 'pk_test_'
+const SUCCESS_PAGE_URL = '' // https://www.example.com
 
 const stripePromise = loadStripe(STRIPE_PK);
 
@@ -31,32 +31,26 @@ const AlipayLogoIcon = styled(Icon)({
   width: '30px',
   margin: '0 4px 7px 0px',
 });
-
 const WechatLogoIcon = styled(Icon)({
   height: '30px',
   width: '30px',
   margin: '0 4px 7px 0px',
 });
-
 const CreditLogoIcon = styled(CreditCardIcon)({
   height: '24px',
   width: '30px',
   margin: '0 3px 2px 0px',
 });
-
-
 const WechatIcon = () => (
   <WechatLogoIcon>
       <img src={WechatLogo} alt="wechat" height={20} width={20}/>
   </WechatLogoIcon>
 )
-
 const AlipayIcon = () => (
   <AlipayLogoIcon>
       <img src={AlipayLogo}  alt="alipay" height={25} width={25}/>
   </AlipayLogoIcon>
 )
-
 const useStyles = makeStyles((theme) => ({
   listItem: {
     padding: theme.spacing(1, 0),

@@ -6,8 +6,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
-const FILE_API_GATEWAY_URL = "" 
-const S3_BUCKET_URL = ""
+const FILE_API_GATEWAY_URL = "" // https://asdfasdf.execute-api.us-east-1.amazonaws.com/Prod
+const S3_BUCKET_URL = "" // https://serverlessrepo-serverless-s3-uploader-s3bucket-asdfasdfasdf.s3.amazonaws.com/
 
 const useStyles = makeStyles((theme) => ({
   root: {

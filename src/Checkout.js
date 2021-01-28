@@ -16,9 +16,9 @@ import Review from './client/Review';
 import Confirmation from './client/Success';
 
 const TESTING_SKIP_TO_REVIEW = false;
-const TEST_NO_EMAIL = true;
-const HOMEPAGE_URL = ""
-const LAMBDA_EMAIL_URL = ''
+const TEST_NO_EMAIL = false;
+const HOMEPAGE_URL = "" // example.com 
+const LAMBDA_EMAIL_URL = '' // https://asdf.execute-api.us-east-1.amazonaws.com/dev/sendEmail
 
 let theme = createMuiTheme();
 theme = responsiveFontSizes(theme);
