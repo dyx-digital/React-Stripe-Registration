@@ -25,12 +25,13 @@ Go to AWS Cloudfront, deploy a new version. Make sure **HTTP to HTTPS redirects*
 ## AWS Setup
 
 - [ ] Setup AWS S3 bucket and change package.json
-- [ ] Sign into AWS CLI account
+- [ ] Create admin user -> sign into AWS CLI account 
+- [ ] aws configure 
 
 - [ ] PaymentIntent - Lambda
 - [ ] Webhook - Lambda
 - [ ] File Uploads - https://serverlessrepo.aws.amazon.com/applications/arn:aws:serverlessrepo:us-east-1:526237104669:applications~Serverless-S3-Uploader
-- [ ] Email - SES
+- [ ] Email - SES -> create Admin SES user
 
 ## Code Changes
 
@@ -54,6 +55,10 @@ UploadButton.js
 - [ ] Email sent properly
 - [ ] File uploads succeed
 
+- [ ] Test credit card
+- [ ] Test wechat
+- [ ] Test alipay
+
 ## Deployment
 
 git checkout -b prod
@@ -65,5 +70,6 @@ Review.js
 - [ ] Put in Prod Stripe PK
 
 ### General Deployment Checklist
+- [ ] Change Alipay Success Page URL to the real Wix Success Page URL
 - [ ] Prod Webhook deployed to Stripe
 - [ ] Deploy to S3 - CloudFront
